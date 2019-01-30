@@ -1,5 +1,5 @@
 
-##Calculating thermal time indices and merging UAV data.
+## Calculating thermal time indices and merging UAV data.
 
 **Name**: Byron Evers<br/>
 **Semester**: Spring 2019 <br/>
