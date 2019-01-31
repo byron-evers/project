@@ -7,7 +7,7 @@
 
 
 ## Objective
-Write a python function to calculate biometeorological time (BMT (T<sub>max</sub>, T<sub>min</sub>, L, _a_<sub>0</sub>,_b_<sub>0</sub> )), physiological days (Pdays (T<sub>min</sub>, T<sub>max</sub>, T<sub>opt</sub>)) and growing degree days (GDD) for several UAV collection dates.
+Write a python function to calculate biometeorological time (BMT (T<sub>max</sub>, T<sub>min</sub>, L, _a_<sub>0</sub>,_b_<sub>0</sub> )), physiological days (Pdays (T<sub>min</sub>, T<sub>max</sub>, T<sub>opt</sub>)) and growing degree days (GDD(T<sub>min</sub>, T<sub>max</sub>, T<sub>base</sub>)) for several UAV collection dates.
 Then, through a python function, merge UAV reflectance data, plot level phenotypic data and calculated values into one .csv file.
 
 
