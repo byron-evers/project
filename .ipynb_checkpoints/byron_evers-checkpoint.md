@@ -1,3 +1,4 @@
+
 ## Calculating thermal time indices and merging UAV data.
 
 **Name**: Byron Evers<br/>
@@ -29,4 +30,6 @@ Over the last two growing season I have collected UAV reflectance data across se
 Kyratzis Angelos C., Skarlatos Dimitrios P., Menexes George C., Vamvakousis Vasileios F., Katsiotis Andreas, 2017. Assessment of Vegetation Indices Derived by UAV Imagery for Durum Wheat Phenotyping under a Water Limited and Heat Stressed Mediterranean Environment. Frontiers in Plant Science V.8 P 1114
 
 Saiyed, I., Bullock, P.R., Sapirstein, H.D., Finlay, G.J., Jarvis, C.K., 2009. Thermal time models for estimating wheat phenological development and weather-based relationships to wheat quality. Can. J. Plant Sci. 89, 429–439.
+
+
 
