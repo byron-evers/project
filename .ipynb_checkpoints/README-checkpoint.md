@@ -46,41 +46,9 @@ Our labs current UAV pipeline includes stitching photos and extracting reflectan
 ## Thermal Time Equations 
 
 
-
-\begin{equation*}
-\ BMT=
-\ \sum_{s1}^{s2} {[a](L-a_0)+a_2(L-a_0)^2}]\\
-\ \times[b_1(T_{max}-b_0)+b_2(T_{max}-b_0)^2]\\
-\ +d_1(T_{min}-b_0)+d_2(T_{min}-b_0)^2]
-\end{equation*}
-
-\begin{equation*} 
-\ \\   
-\ \\
-\end{equation*}
-
-
-\begin{equation*}
-\ GDD=
-\ \Bigl(\frac{T_{max} + T_{min}}{\ 2} \Bigr)-T_{base}
-\end{equation*}
-
-\begin{equation*} 
-\ \\   
-\ \\
-\end{equation*}
-
-\begin{equation*}
-\ Pdays=
-\frac{1}{24}(5 \times P(T_1) + 8 \times P(T_2)+8 \times P(T_3)+ 3 \times P(T_4))\\
-\end{equation*}
-where 
-\begin{equation*} 
-\ T_1=T_{min}\\
-\ T_2= \frac{(2 \times T{min})+ T_{max}}{3}\\
-\ T_3= \frac{T_{min}+(2 \times T_{max})}{3}\\
-\ T_4=T_{max}
-\end{equation*}
+<img src="bmt.png" alt="sketch_image" width="350"/>
+<img src="gdd.png" alt="sketch_image" width="300"/>
+<img src="pdays.png" alt="sketch_image" width="500"/>
 
 ## Reflectance Indices and Variables
 
@@ -99,20 +67,7 @@ where
 ## Reflectance Equations 
 
 
-\begin{equation*}
-\ NDVI=
-\frac{NIR-R}{\ NIR + R} 
-\end{equation*}
-
-\begin{equation*}
-\ NDRE=
-\frac{NIR-RE}{\ NIR + RE} 
-\end{equation*}
-
-\begin{equation*}
-\ GNDVI=
-\frac{NIR-G}{\ NIR + G} 
-\end{equation*}
+<img src="reflectance_equations.png" alt="sketch_image" width="500"/>
 
 
 ## References
