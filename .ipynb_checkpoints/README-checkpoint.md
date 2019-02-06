@@ -6,12 +6,12 @@
 
 
 ## Objective
-Write a python function to calculate biometeorological time (BMT (T<sub>max</sub>, T<sub>min</sub>, L, _a_<sub>0</sub>,_b_<sub>0</sub> )), physiological days (Pdays (T<sub>min</sub>, T<sub>max</sub>, T<sub>opt</sub>)) and growing degree days (GDD (T<sub>min</sub>, T<sub>max</sub>, T<sub>base</sub>)) for several UAV collection dates.
-Then, through a python function, merge UAV reflectance data, plot level phenotypic data and calculated values into one .csv file.
+Write a python function to calculate biometeorological time (BMT), physiological days (Pdays) and growing degree days (GDD) for several UAV collection dates. The objective is to have the thermal time parameters calculated for the specific dates that UAV data was collected. 
+Ultimitly, through a python function, I would like merge all of the UAV reflectance data, plot level phenotypic data and the calculated thermal values into one .csv file. 
 
 
 ## Outcomes
-The final outcome is to generate a .csv file that has UAV and plot level phenotype data merged buy plot_id with additional columns for calculated date times. 
+The final outcome is to generate a .csv file that has UAV and plot level phenotype data merged by plot_id with additional columns for calculated date times. 
 
 
 ## Rationale
@@ -20,10 +20,100 @@ Current phenotyping methods are labor intensive, hard to replicate, and have lim
 
 Over the last two growing season I have collected UAV reflectance data across several breeding nursery locations at several dates. Currently this data is being merged with plot level data with excel. This process is inefficient and introduces potential errors. I would like to stream line this process with Python. Additionally, having the ability to calculate several phenological development thermal times, with a Python function, will be useful for modeling purposes.
 
+Our labs current UAV pipeline includes stitching photos and extracting reflectance data through Agisoft software. Data recived from this process is formated as a .csv file and includes 5 indiviual reflectance bands (R,G,B,RE and NIR) and 3 vegitative indices (NDVI, NDRE and GNDVI). Each band and vegitative index can be be used to analyze biophysical traits of various crops. At this time I do not wish to calculate these indcies with python, though I would like to write a python script that can combine the Agisoft data with the calculated thermal times adn plot level data such as yield and plant hieght. 
+
 
 ## Sketch
 
 <img src="diagram.png" alt="sketch_image" width="500"/>
+
+## Thermal Time Indices 
+
+* **BMT**-Biometeorological ime
+* **GDD**-Growing Degree Days
+* **Pdays**-Physiological Days 
+
+## Thermal Time Variables
+* **T<sub>max</sub>**-Maximum Air Temperature in a Day
+* **T<sub>minx</sub>**-Minimum Air Temperature in a Day
+* **T<sub>base</sub>**-Base Air Temperature(5<sup>o</sup>C)
+* **T<sub>opt</sub>**-Optimum Air Temperature(5<sup>o</sup>C)
+* **L**-Daily Photoperiod
+* **T**-Daily Temperature
+* **a<sub>0</sub>**-Base Daylength
+* **b<sub>0</sub>**-Base Temperature
+
+## Thermal Time Equations 
+
+
+
+\begin{equation*}
+\ BMT=
+\ \sum_{s1}^{s2} {[a](L-a_0)+a_2(L-a_0)^2}]\\
+\ \times[b_1(T_{max}-b_0)+b_2(T_{max}-b_0)^2]\\
+\ +d_1(T_{min}-b_0)+d_2(T_{min}-b_0)^2]
+\end{equation*}
+
+\begin{equation*} 
+\ \\   
+\ \\
+\end{equation*}
+
+
+\begin{equation*}
+\ GDD=
+\ \Bigl(\frac{T_{max} + T_{min}}{\ 2} \Bigr)-T_{base}
+\end{equation*}
+
+\begin{equation*} 
+\ \\   
+\ \\
+\end{equation*}
+
+\begin{equation*}
+\ Pdays=
+\frac{1}{24}(5 \times P(T_1) + 8 \times P(T_2)+8 \times P(T_3)+ 3 \times P(T_4))\\
+\end{equation*}
+where 
+\begin{equation*} 
+\ T_1=T_{min}\\
+\ T_2= \frac{(2 \times T{min})+ T_{max}}{3}\\
+\ T_3= \frac{T_{min}+(2 \times T_{max})}{3}\\
+\ T_4=T_{max}
+\end{equation*}
+
+## Reflectance Indices and Variables
+
+* **NDVI**- Normalized Difference Vegitation Index 
+* **NDRE**- Normalized Difference Red Edge
+* **GNDVI**- Green Normalized Difference Vegitation Index
+
+## Reflectance Variables
+
+* **NIR**- Near-infared reflectance between 800-880nm 
+* **RE**- Red Edge reflectance between 707-727nm 
+* **R**- Red reflectance between 658-678nm 
+* **G**- Green reflectance between 540-560nm 
+* **B**- Blue reflectance between 455-495nm 
+
+## Reflectance Equations 
+
+
+\begin{equation*}
+\ NDVI=
+\frac{NIR-R}{\ NIR + R} 
+\end{equation*}
+
+\begin{equation*}
+\ NDRE=
+\frac{NIR-RE}{\ NIR + RE} 
+\end{equation*}
+
+\begin{equation*}
+\ GNDVI=
+\frac{NIR-G}{\ NIR + G} 
+\end{equation*}
+
 
 ## References
 Kyratzis Angelos C., Skarlatos Dimitrios P., Menexes George C., Vamvakousis Vasileios F., Katsiotis Andreas, 2017. Assessment of Vegetation Indices Derived by UAV Imagery for Durum Wheat Phenotyping under a Water Limited and Heat Stressed Mediterranean Environment. Frontiers in Plant Science V.8 P 1114
