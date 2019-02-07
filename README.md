@@ -75,3 +75,7 @@ Kyratzis Angelos C., Skarlatos Dimitrios P., Menexes George C., Vamvakousis Vasi
 
 Saiyed, I., Bullock, P.R., Sapirstein, H.D., Finlay, G.J., Jarvis, C.K., 2009. Thermal time models for estimating wheat phenological development and weather-based relationships to wheat quality. Can. J. Plant Sci. 89, 429–439.
 
+
+
+
+%5Cbegin%7Bequation%2A%7D%0D%0A%5C+BMT%3D%0D%0A%5C+%5Csum_%7Bs1%7D%5E%7Bs2%7D+%7B%5Ba%5D%28L-a_0%29%2Ba_2%28L-a_0%29%5E2%7D%5D%5C%5C%0D%0A%5C+%5Ctimes%5Bb_1%28T_%7Bmax%7D-b_0%29%2Bb_2%28T_%7Bmax%7D-b_0%29%5E2%5D%5C%5C%0D%0A%5C+%2Bd_1%28T_%7Bmin%7D-b_0%29%2Bd_2%28T_%7Bmin%7D-b_0%29%5E2%5D%0D%0A%5Cend%7Bequation%2A%7D
