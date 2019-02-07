@@ -29,7 +29,7 @@ Current UAV pipeline includes stitching photos and extracting plot level reflect
 
 ## Thermal Time Indices 
 
-* **BMT**-Biometeorological ime
+* **BMT**-Biometeorological Time
 * **GDD**-Growing Degree Days
 * **Pdays**-Physiological Days 
 
